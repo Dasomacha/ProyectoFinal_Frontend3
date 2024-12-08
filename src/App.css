@@ -1,89 +1,46 @@
+/* Aseguramos que el contenedor principal ocupe todo el ancho disponible */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 100%;  /* Aseguramos que el contenedor principal ocupe todo el ancho */
+  margin: 0;
+  padding: 0; /* Eliminamos cualquier padding que podría estar creando espacio */
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 div{
   margin-bottom: 1em;
 }
 
-div label{
-  display: block;
-  margin-bottom: 0.5em;
-}
-
-div input{
-  width: 100%;
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 0.5em;
-}
-
-/* src/App.css o src/components/ProductList.css */
+/* El contenedor de las tarjetas */
 .product-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Las tarjetas se ajustarán si no caben en la misma línea */
   gap: 20px; /* Espacio entre las tarjetas */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
+  justify-content: flex-start; /* Alinea las tarjetas al principio sin espacio lateral */
+  justify-content: center;
 }
 
+/* Estilo de cada tarjeta */
 .product-card {
   border: 1px solid #ddd;
   padding: 10px;
   text-align: center;
-  width: 150px; /* Ancho fijo de las tarjetas */
+  width: 180px; /* Ancho ajustado de las tarjetas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: #fff;
 }
 
+/* Estilo de las imágenes dentro de las tarjetas */
 .product-card img {
   width: 100%;
-  height: auto;
+  height: 200px; /* Ajustamos la altura de las imágenes para que sean más grandes */
+  object-fit: cover;
   border-radius: 8px;
 }
 
+/* Título dentro de la tarjeta */
 .product-card h3 {
   margin-top: 10px;
   font-size: 1.2rem;
   color: #333;
 }
-

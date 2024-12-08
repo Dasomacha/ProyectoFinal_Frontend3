@@ -1,7 +1,7 @@
 // src/pages/home/Home.jsx
 import React from "react";
 import { Link } from "react-router"; // Importamos el componente Link
-import ProductList from '../../components/ProductList';
+import ProductList from '../components/ProductList';
 
 const Home = () => {
   return (
