@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router"; // Asegúrate de usar "react-router-dom"
 import ProductList from "../components/ProductList";
 
 const Home = () => {

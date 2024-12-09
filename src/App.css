@@ -1,7 +1,7 @@
 /* Aseguramos que el contenedor principal ocupe todo el ancho disponible */
 #root {
   max-width: 100%;  /* Aseguramos que el contenedor principal ocupe todo el ancho */
-  margin: 0;
+  margin-top: 2rem;
   padding: 0; /* Eliminamos cualquier padding que podría estar creando espacio */
   text-align: center;
 }
@@ -16,6 +16,7 @@ body {
   gap: 20px; /* Espacio entre las tarjetas */
   justify-content: flex-start; /* Alinea las tarjetas al principio sin espacio lateral */
   justify-content: center;
+  padding-top: 2rem;
 }
 
 /* Estilo de cada tarjeta */
@@ -42,4 +43,9 @@ body {
   margin-top: 10px;
   font-size: 1.2rem;
   color: #333;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
 }

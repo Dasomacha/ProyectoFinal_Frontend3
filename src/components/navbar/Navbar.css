@@ -1,28 +1,45 @@
-/* src/components/Navbar/Navbar.css */
 .navbar {
-    background-color: #a71b1b;
+    background-color: #d6d6d6;
     padding: 10px 20px;
-    width: 100%;  /* Esto asegura que el navbar ocupe todo el ancho de la página */
-}
-
-.nav-list {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Usamos flexbox para distribuir los elementos */
+    justify-content: space-between; /* Se asegura que el logo y los enlaces estén en los extremos opuestos */
+    align-items: center; /* Alinea los elementos verticalmente */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 120px;
+    object-fit: cover;
+  }
+  
+  .nav-list {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
     margin: 0;
-    padding: 0;
-}
-
-.nav-item {
+    padding: 0 3rem;
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+  }
+  
+  .nav-item {
     margin: 0 15px;
-}
-
-.nav-link {
-    color: #fff;
+  }
+  
+  .nav-link {
+    color: #000000;
     text-decoration: none;
     font-size: 18px;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-}
+  }
+  
+  .nav-link:hover {
+    color: antiquewhite;
+  }
+  
