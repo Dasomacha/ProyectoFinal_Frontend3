@@ -1,10 +1,11 @@
 import React from "react";
-import ProductList from "../components/ProductList";
+import CardList from "../components/CardList";
 
 const Home = () => {
   return (
     <div>
-      <ProductList />
+      <h1>Pokémon Wiki</h1>
+      <CardList />
     </div>
   );
 };

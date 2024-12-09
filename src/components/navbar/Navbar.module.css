@@ -11,7 +11,7 @@
     align-items: center; /* Alinea los elementos verticalmente */
   }
   
-  .logo-container {
+  .logoContainer {
     display: flex;
     align-items: center;
   }
@@ -21,25 +21,25 @@
     object-fit: cover;
   }
   
-  .nav-list {
+  .navList {
     list-style-type: none;
     display: flex;
     margin: 0;
-    padding: 0 3rem;
+    padding: 0 2rem;
     justify-content: flex-end; /* Alinea los enlaces a la derecha */
   }
   
-  .nav-item {
+  .navItem {
     margin: 0 15px;
   }
   
-  .nav-link {
+  .navLink {
     color: #000000;
     text-decoration: none;
     font-size: 18px;
   }
   
-  .nav-link:hover {
+  .navLink:hover {
     color: antiquewhite;
   }
   

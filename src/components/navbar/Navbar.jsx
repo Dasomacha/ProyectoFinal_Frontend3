@@ -1,20 +1,20 @@
 import React from "react";
-import { Link } from "react-router"; // Asegúrate de usar "react-router-dom"
-import "./Navbar.css"; // Importamos los estilos CSS
+import { Link } from "react-router"; // Usar react-router-dom en vez de "react-router"
+import styles from "./Navbar.module.css"; // Asegúrate de que los estilos sean importados correctamente
 import logo from "../../assets/logo.png"; // Importa la imagen desde assets
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="logo-container">
-        <img src={logo} alt="Logo" className="logo" />
+    <nav className={styles.navbar}>
+      <div className={styles.logoContainer}>
+        <img src={logo} alt="Logo" className={styles.logo} />
       </div>
-      <ul className="nav-list">
-        <li className="nav-item">
-          <Link to="/" className="nav-link">Home</Link>
+      <ul className={styles.navList}>
+        <li className={styles.navItem}>
+          <Link to="/" className={styles.navLink}>Home</Link>
         </li>
-        <li className="nav-item">
-          <Link to="/favorites" className="nav-link">Favoritos</Link>
+        <li className={styles.navItem}>
+          <Link to="/favorites" className={styles.navLink}>Favoritos</Link>
         </li>
       </ul>
     </nav>

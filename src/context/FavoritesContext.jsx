@@ -10,10 +10,10 @@ export const useFavorites = () => {
 export const FavoritesProvider = ({ children }) => {
   const [favorites, setFavorites] = useState([]); // Estado para la lista de favoritos
 
-  const addToFavorites = (product) => {
+  const addToFavorites = (card) => {
     setFavorites((prevFavorites) => {
-      if (prevFavorites.some((item) => item.id === product.id)) return prevFavorites; // Evita duplicados
-      return [...prevFavorites, product];
+      if (prevFavorites.some((item) => item.id === card.id)) return prevFavorites; // Evita duplicados
+      return [...prevFavorites, card];
     });
   };
 
