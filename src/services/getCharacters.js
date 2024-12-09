@@ -6,18 +6,17 @@ export const getCharacters = async () => {
 		const response = await fetch(`${url}?limit=${limit}`);
 		const data = await response.json();
 
-		// Obtener datos detallados para cada Pokémon
 		const detailedData = await Promise.all(
 			data.results.map(async (character, index) => {
 				const characterDetails = await fetch(character.url).then((response) =>
 					response.json()
 				);
 				return {
-					id: index, // Clave única generada a partir del índice
+					id: index, 
 					name: character.name,
 					image: characterDetails.sprites.front_default,
-					types: characterDetails.types, // Tipos de Pokémon
-					abilities: characterDetails.abilities,  // URL de la imagen
+					types: characterDetails.types, 
+					abilities: characterDetails.abilities,  
 					stats: characterDetails.stats,
 					height: characterDetails.height,
 				};

@@ -1,25 +1,7 @@
-import React, { useState } from "react";
-import { useFavorites } from "../context/FavoritesContext";
-import Heart from "@react-sandbox/heart";
+import React from "react";
+import FavoriteIcon from "./FavoriteIcon";
 
 const DetailCard = ({ card }) => {
-  const { favorites, addToFavorites, removeFromFavorites } = useFavorites();
-  const isFavoriteInitial = favorites.some((item) => item.id === card.id);
-  const [isFavorite, setFavorite] = useState(isFavoriteInitial);
-
-  const handleFavoriteToggle = () => {
-    setFavorite(!isFavorite);
-    if (isFavorite) {
-      removeFromFavorites(card.id);
-    } else {
-      addToFavorites(card);
-    }
-  };
-
-  const types = Array.isArray(card.types)
-    ? card.types.map((type) => type.type.name).join(", ")
-    : "N/A";
-
   const abilities = Array.isArray(card.abilities)
     ? card.abilities.map((ability) => ability.ability.name).join(", ")
     : "N/A";
@@ -34,21 +16,12 @@ const DetailCard = ({ card }) => {
     <p>N/A</p>
   );
 
-  const heightInMeters = card.height ? (card.height / 10).toFixed(1) : "N/A";
+   const heightInMeters = card.height ? (card.height / 10).toFixed(1) : "N/A";
+  const types = Array.isArray(card.types) ? card.types.map((type) => type.type.name).join(", ") : "N/A";
 
   return (
     <div className="card">
-      <div className="heart-icon">
-        <Heart
-          width={32}
-          height={32}
-          active={isFavorite}
-          onClick={handleFavoriteToggle}
-          activeColor="#ff0000"
-          inactiveColor="#b3b1b1"
-          strokeWidth={70}
-        />
-      </div>
+      <FavoriteIcon card={card} />
 
       <img
         src={card.image}
@@ -59,7 +32,7 @@ const DetailCard = ({ card }) => {
       <h3>{card.name}</h3>
 
       <div className="basic-info">
-        <p><strong>Type:</strong> {types}</p> 
+        <p><strong>Type:</strong> {types}</p>
         <p><strong>Abilities:</strong> {abilities}</p>
         <p><strong>Height:</strong> {heightInMeters} m</p>
         <div className="stats">
@@ -67,7 +40,6 @@ const DetailCard = ({ card }) => {
           {stats}
         </div>
       </div>
-
     </div>
   );
 };

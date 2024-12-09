@@ -1,16 +1,14 @@
-/* Componente de favoritos */
 import React from 'react';
-import { useFavorites } from '../context/FavoritesContext'; // Importamos el hook del contexto
-import Card from '../components/Card'; // Importamos el componente FavoriteItem
-
+import { useFavorites } from '../context/FavoritesContext'; 
+import Card from '../components/Card';
 const Favorites = () => {
-  const { favorites } = useFavorites(); // Obtén el estado de favoritos desde el contexto
+  const { favorites } = useFavorites();
 
   return (
     <div className="favorites">
       <h1>Mis Favoritos</h1>
       {favorites.length === 0 ? (
-        <p>No tienes personajes favoritos.</p>
+        <p>No tienes personajes en favoritos.</p>
       ) : (
         <div className="card-list">
           {favorites.map((card) => (

@@ -16,6 +16,9 @@ const Navbar = () => {
         <li className={styles.navItem}>
           <Link to="/favorites" className={styles.navLink}>Favoritos</Link>
         </li>
+        <li className={styles.navItem}>
+          <Link to="/comments" className={styles.navLink}>Comentarios</Link> {/* Nueva ruta para comentarios */}
+        </li>
       </ul>
     </nav>
   );
