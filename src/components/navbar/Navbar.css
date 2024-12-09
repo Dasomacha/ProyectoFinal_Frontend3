@@ -1,0 +1,28 @@
+/* src/components/Navbar/Navbar.css */
+.navbar {
+    background-color: #a71b1b;
+    padding: 10px 20px;
+    width: 100%;  /* Esto asegura que el navbar ocupe todo el ancho de la página */
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}

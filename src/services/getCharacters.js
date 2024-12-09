@@ -1,23 +1,30 @@
 export const getCharacters = async () => {
-	const url = "https://rickandmortyapi.com/api/character";
+	const url = "https://pokeapi.co/api/v2/pokemon";
+	const limit = 40; // Número de Pokémon a obtener
+  
 	try {
-	  const characterPromises = [];
-	  
-	  // Hacemos tres solicitudes para obtener 50 personajes
-	  for (let i = 1; i <= 4; i++) {
-		characterPromises.push(fetch(`${url}?page=${i}`).then(response => response.json()));
-	  }
+	  const response = await fetch(`${url}?limit=${limit}`);
+	  const data = await response.json();
   
-	  // Esperamos que todas las promesas se resuelvan
-	  const responses = await Promise.all(characterPromises);
+	  // Obtener datos detallados para cada Pokémon
+	  const detailedData = await Promise.all(
+		data.results.map(async (character, index) => {
+		  const characterDetails = await fetch(character.url).then((response) =>
+			response.json()
+		  );
+		  return {
+			id: index, // Clave única generada a partir del índice
+			name: character.name,
+			image: characterDetails.sprites.front_default, // URL de la imagen
+		  };
+		})
+	  );
   
-	  // Extraemos los resultados de cada página
-	  const allCharacters = responses.flatMap(response => response.results);
-  
-	  return allCharacters; // Devolvemos los primeros 50 personajes
+	  return detailedData;
 	} catch (error) {
-	  console.error("Error al obtener los personajes:", error);
+	  console.error("Error fetching Pokémon data:", error);
 	  return [];
 	}
   };
+  
   

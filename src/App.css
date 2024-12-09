@@ -6,10 +6,9 @@
   text-align: center;
 }
 
-div{
-  margin-bottom: 1em;
+body {
+  flex-direction: column
 }
-
 /* El contenedor de las tarjetas */
 .product-list {
   display: flex;

@@ -1,7 +1,6 @@
-// src/components/ProductList.jsx
-import React, { useEffect, useState } from 'react';
-import { getCharacters } from '../services/getCharacters'; // Importar la función del servicio
-import ProductCard from './ProductCard';
+import React, { useEffect, useState } from "react";
+import { getCharacters } from "../services/getCharacters"; // Importar la función del servicio
+import ProductCard from "./ProductCard";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
