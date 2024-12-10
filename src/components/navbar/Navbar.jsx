@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import styles from "./Navbar.module.css"; 
 import logo from "../../assets/logo.png"; 
 
 const Navbar = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [location]);
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router'; 
-import DetailCard from '../components/DetailCard'; 
+import DetailCard from '../components/detailcard/DetailCard'; 
 import { getCharacters } from '../services/getCharacters';
 
 const CharacterInfo = () => {

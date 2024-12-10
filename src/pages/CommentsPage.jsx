@@ -51,7 +51,6 @@ const CommentsPage = () => {
     } else {
       Swal.fire({
         icon: "error",
-        title: "Oops...",
         text: "Por favor, completa todos los campos y selecciona una calificación.",
       });
     }

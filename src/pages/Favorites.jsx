@@ -2,6 +2,8 @@ import React from 'react';
 import { useFavorites } from '../context/FavoritesContext';
 import Card from '../components/Card';
 import pokeballImage from '../assets/pokeball.png';
+import ScrollToTop from "../components/scrollbtn/ScrollToTop";
+
 
 const Favorites = () => {
   const { favorites } = useFavorites();
@@ -26,6 +28,7 @@ const Favorites = () => {
           ))}
         </div>
       )}
+      <ScrollToTop />
     </div>
   );
 };

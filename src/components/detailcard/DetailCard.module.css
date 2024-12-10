@@ -1,0 +1,49 @@
+.cardDetail {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #d5e1eb;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.basicInfo {
+  font-size: 19px;
+}
+
+.basicInfo p {
+  margin: 8px 0;
+}
+
+.basicInfo h4 {
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+
+.basicInfo .stats {
+  margin-top: 10px;
+}
+
+.basicInfo ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.basicInfo li {
+  margin: 5px 0;
+}
+
+.leftColumn img {
+  padding-top: 2rem;
+}
+
+.leftColumn .heartIcon {
+  margin: 20px;
+  width: 20px;
+}

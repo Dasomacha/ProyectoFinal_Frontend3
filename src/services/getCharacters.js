@@ -1,21 +1,21 @@
-export const getCharacters = async () => {
-	const url = "https://pokeapi.co/api/v2/pokemon";
-	const limit = 160;
+const baseUrl = "https://pokeapi.co/api/v2/pokemon";
+
+export const getCharacters = async (limit = 180) => {
 	try {
-		const response = await fetch(`${url}?limit=${limit}`);
+		const response = await fetch(`${baseUrl}?limit=${limit}`);
 		const data = await response.json();
 
 		const detailedData = await Promise.all(
 			data.results.map(async (character, index) => {
-				const characterDetails = await fetch(character.url).then((response) =>
-					response.json()
+				const characterDetails = await fetch(character.url).then((res) =>
+					res.json()
 				);
 				return {
-					id: index, 
+					id: index,
 					name: character.name,
 					image: characterDetails.sprites.front_default,
-					types: characterDetails.types, 
-					abilities: characterDetails.abilities,  
+					types: characterDetails.types,
+					abilities: characterDetails.abilities,
 					stats: characterDetails.stats,
 					height: characterDetails.height,
 				};
@@ -28,4 +28,3 @@ export const getCharacters = async () => {
 		return [];
 	}
 };
-
