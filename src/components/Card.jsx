@@ -17,8 +17,8 @@ const Card = ({ card }) => {
         />
       </Link>
       <div className="card-info">
-        <h3>{card.name}</h3>
-        <p><strong>Type:</strong> {types}</p>
+        <h2>{card.name}</h2>
+        <p><strong>Tipo:</strong> {types}</p>
       </div>
     </div>
   );

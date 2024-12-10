@@ -28,7 +28,7 @@ const DetailCard = ({ card }) => {
           alt={card.name}
           style={{ width: "250px", height: "250px", objectFit: "cover" }}
         />
-        <h3>{card.name}</h3>
+        <h2>{card.name}</h2>
         
       </div>
 
@@ -39,7 +39,7 @@ const DetailCard = ({ card }) => {
           <p><strong>Habilidades:</strong> {abilities}</p>
           <p><strong>Altura:</strong> {heightInMeters} m</p>
           <div className="stats">
-            <h4>Estadísticas:</h4>
+            <h3>Estadísticas:</h3>
             {stats}
           </div>
         </div>

@@ -1,8 +1,10 @@
 /* Aseguramos que el contenedor principal ocupe todo el ancho disponible */
 #root {
-  max-width: 100%;  /* Aseguramos que el contenedor principal ocupe todo el ancho */
+  max-width: 100%;
+  /* Aseguramos que el contenedor principal ocupe todo el ancho */
   margin-top: 2rem;
-  padding: 0; /* Eliminamos cualquier padding que podría estar creando espacio */
+  padding: 0;
+  /* Eliminamos cualquier padding que podría estar creando espacio */
   text-align: center;
 }
 
@@ -12,15 +14,55 @@ body {
 
 h1 {
   padding-top: 2rem;
+  font-family: "Caveat Brush", cursive;
+  font-size: 50px;
 }
+
+h2, h3 {
+  font-family: "Caveat Brush", cursive;
+  font-size: 30px;
+}
+
+strong{
+  font-family: "Caveat Brush", cursive;
+  font-size: 25px;
+}
+
+
 /* El contenedor de las tarjetas */
 .card-list {
   display: flex;
-  flex-wrap: wrap; /* Las tarjetas se ajustarán si no caben en la misma línea */
-  gap: 20px; /* Espacio entre las tarjetas */
-  justify-content: flex-start; /* Alinea las tarjetas al principio sin espacio lateral */
+  flex-wrap: wrap;
+  /* Las tarjetas se ajustarán si no caben en la misma línea */
+  gap: 20px;
+  /* Espacio entre las tarjetas */
+  justify-content: flex-start;
+  /* Alinea las tarjetas al principio sin espacio lateral */
   justify-content: center;
   padding: 1rem 0;
+}
+
+.pokeball-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin: 10px;
+  /* Adds 10px margin around the Pokéball */
+}
+
+.left-column img {
+  padding-top: 2rem;
+}
+.title {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: baseline;
+  
+}
+
+.title h1 {
+  padding: 0;
 }
 
 /* Estilo de cada tarjeta */
@@ -28,7 +70,8 @@ h1 {
   border: 1px solid #ddd;
   padding: 15px;
   text-align: center;
-  width: 180px; /* Ancho ajustado de las tarjetas */
+  width: 180px;
+  /* Ancho ajustado de las tarjetas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.185);
   border-radius: 10px;
   background-color: #011222;
@@ -39,7 +82,7 @@ h1 {
 /* Estilo de las imágenes dentro de las tarjetas */
 .card img {
   width: 100%;
-  height: 200px; 
+  height: 200px;
   object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -49,9 +92,7 @@ h1 {
 }
 
 .heart-icon {
-  margin-bottom: 20px;
-  top: 10px;
-  right: 10px;
+  margin: 20px;
   user-select: none
 }
 
@@ -70,19 +111,19 @@ h1 {
   display: flex;
   align-items: flex-start;
   padding: 20px;
-  background-color: #fff;
+  background-color: #d5e1eb;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 700px; /* Ajusta el tamaño según lo que necesites */
+  max-width: 700px;
   margin: 20px auto;
   align-items: flex-start;
   justify-content: space-evenly;
 }
 
 .basic-info {
-  flex-grow: 1;
+  font-size: 19px;
 }
 
 .basic-info p {
@@ -107,7 +148,7 @@ h1 {
   margin: 5px 0;
 }
 
-.buttons{
+.buttons {
   display: flex;
   justify-content: space-evenly;
 }
@@ -207,9 +248,16 @@ h1 {
 }
 
 .card-info {
-  background-color: #f6f7f8; /* Set the background color */
-  border-radius: 10px; /* Optional: rounded corners */
+  background-color: #f6f7f8;
+  /* Set the background color */
+  border-radius: 10px;
+  /* Optional: rounded corners */
   text-align: center;
   padding: 10px;
   margin-top: 10px;
 }
+
+.card-info strong{
+  font-size: 20px;
+}
+

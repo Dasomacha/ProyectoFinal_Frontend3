@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardList from "../components/CardList";
 import { getCharacters } from "../services/getCharacters";
+import ScrollToTop from "../components/scrollbtn/ScrollToTop";
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
@@ -25,7 +26,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <h1>Pokémon Wiki</h1>
-      
+
       <div className="search-container">
         <input
           type="text"
@@ -34,10 +35,14 @@ const Home = () => {
           onChange={handleSearchChange}
           className="search-input"
         />
-        <button className="clear-button" onClick={handleClearInput}>Borrar</button>
+        <button className="clear-button" onClick={handleClearInput}>
+          Borrar
+        </button>
       </div>
-      
+
       <CardList characters={filteredCharacters} />
+
+      <ScrollToTop />
     </div>
   );
 };
