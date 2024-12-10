@@ -33,7 +33,6 @@ const DetailCard = ({ card }) => {
       </div>
 
       <div className="right-column">
-        {/* Información adicional */}
         <div className="basic-info">
           <p><strong>Tipo:</strong> {types}</p>
           <p><strong>Habilidades:</strong> {abilities}</p>

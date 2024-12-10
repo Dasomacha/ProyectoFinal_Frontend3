@@ -22,11 +22,8 @@ const CommentsPage = () => {
   };
 
   const saveToLocalStorage = (data) => {
-    // Recuperar los comentarios existentes del localStorage
     const existingComments = JSON.parse(localStorage.getItem("comments")) || [];
-    // Agregar el nuevo comentario al array
     existingComments.push(data);
-    // Guardar el array actualizado de comentarios en localStorage
     localStorage.setItem("comments", JSON.stringify(existingComments));
   };
 
@@ -40,7 +37,6 @@ const CommentsPage = () => {
       formData.comment &&
       formData.rating > 0
     ) {
-      // Guardar el comentario en localStorage
       saveToLocalStorage(formData);
 
       Swal.fire({
@@ -51,7 +47,6 @@ const CommentsPage = () => {
         timer: 1500,
       });
 
-      // Limpiar el formulario
       setFormData({ name: "", email: "", phone: "", comment: "", rating: 0 });
     } else {
       Swal.fire({
