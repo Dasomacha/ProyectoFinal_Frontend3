@@ -1,45 +1,50 @@
 .navbar {
-    background-color: #d6d6d6;
-    padding: 10px 20px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex; /* Usamos flexbox para distribuir los elementos */
-    justify-content: space-between; /* Se asegura que el logo y los enlaces estén en los extremos opuestos */
-    align-items: center; /* Alinea los elementos verticalmente */
-  }
-  
-  .logoContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 120px;
-    object-fit: cover;
-  }
-  
-  .navList {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0 2rem;
-    justify-content: flex-end; /* Alinea los enlaces a la derecha */
-  }
-  
-  .navItem {
-    margin: 0 15px;
-  }
-  
-  .navLink {
-    color: #000000;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .navLink:hover {
-    color: antiquewhite;
-  }
-  
+  background-color: #9abdd0;
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  object-fit: cover;
+}
+
+.navList {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0 2rem;
+  justify-content: flex-end;
+}
+
+.navItem {
+  margin: 0 15px;
+}
+
+.navLink {
+  color: #011222;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navLink:hover {
+  color: rgb(240, 246, 253);
+}
+
+.navLink.active {
+  border-bottom: 3px solid rgb(7, 9, 145);
+  font-weight: bold;
+  color: #0b0a7c;
+}

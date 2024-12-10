@@ -1,6 +1,6 @@
 export const getCharacters = async () => {
 	const url = "https://pokeapi.co/api/v2/pokemon";
-	const limit = 60; // Número de Pokémon a obtener
+	const limit = 160; // Número de Pokémon a obtener
 
 	try {
 		const response = await fetch(`${url}?limit=${limit}`);

@@ -16,11 +16,10 @@ const Card = ({ card }) => {
           style={{ width: "180px", height: "180px", objectFit: "cover" }}
         />
       </Link>
-
-      <h3>{card.name}</h3>
-
-      {/* Mostrar tipos */}
-      <p><strong>Type:</strong> {types}</p>
+      <div className="card-info">
+        <h3>{card.name}</h3>
+        <p><strong>Type:</strong> {types}</p>
+      </div>
     </div>
   );
 };

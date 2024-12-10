@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { getCharacters } from "../services/getCharacters"; 
+import React from "react";
 import Card from "./Card";
 
-const CardList = () => {
-  const [Cards, setCard] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getCharacters();
-      setCard(data);
-    };
-    fetchData();
-  }, []);
-
+const CardList = ({ characters }) => {
   return (
     <div className="card-list">
-      {Cards.map((card) => (
+      {characters.map((card) => (
         <Card key={card.id} card={card} />
       ))}
     </div>
@@ -23,3 +12,4 @@ const CardList = () => {
 };
 
 export default CardList;
+

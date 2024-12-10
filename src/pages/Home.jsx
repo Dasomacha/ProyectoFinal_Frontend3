@@ -1,11 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CardList from "../components/CardList";
+import { getCharacters } from "../services/getCharacters";
 
 const Home = () => {
+  const [characters, setCharacters] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    getCharacters().then((data) => setCharacters(data));
+  }, []);
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleClearInput = () => {
+    setSearchQuery("");
+  };
+
+  const filteredCharacters = characters.filter((character) =>
+    character.name.toLowerCase().startsWith(searchQuery.toLowerCase())
+  );
+
   return (
-    <div>
+    <div className="home-container">
       <h1>Pokémon Wiki</h1>
-      <CardList />
+      
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Busca un pokémon"
+          value={searchQuery}
+          onChange={handleSearchChange}
+          className="search-input"
+        />
+        <button className="clear-button" onClick={handleClearInput}>Borrar</button>
+      </div>
+      
+      <CardList characters={filteredCharacters} />
     </div>
   );
 };

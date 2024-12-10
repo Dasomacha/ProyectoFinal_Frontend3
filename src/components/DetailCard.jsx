@@ -16,28 +16,32 @@ const DetailCard = ({ card }) => {
     <p>N/A</p>
   );
 
-   const heightInMeters = card.height ? (card.height / 10).toFixed(1) : "N/A";
+  const heightInMeters = card.height ? (card.height / 10).toFixed(1) : "N/A";
   const types = Array.isArray(card.types) ? card.types.map((type) => type.type.name).join(", ") : "N/A";
 
   return (
-    <div className="card">
+    <div className="card-detail">
+      <div className="left-column">
       <FavoriteIcon card={card} />
+        <img
+          src={card.image}
+          alt={card.name}
+          style={{ width: "250px", height: "250px", objectFit: "cover" }}
+        />
+        <h3>{card.name}</h3>
+        
+      </div>
 
-      <img
-        src={card.image}
-        alt={card.name}
-        style={{ width: "180px", height: "180px", objectFit: "cover" }}
-      />
-
-      <h3>{card.name}</h3>
-
-      <div className="basic-info">
-        <p><strong>Type:</strong> {types}</p>
-        <p><strong>Abilities:</strong> {abilities}</p>
-        <p><strong>Height:</strong> {heightInMeters} m</p>
-        <div className="stats">
-          <h4>Stats:</h4>
-          {stats}
+      <div className="right-column">
+        {/* Información adicional */}
+        <div className="basic-info">
+          <p><strong>Tipo:</strong> {types}</p>
+          <p><strong>Habilidades:</strong> {abilities}</p>
+          <p><strong>Altura:</strong> {heightInMeters} m</p>
+          <div className="stats">
+            <h4>Estadísticas:</h4>
+            {stats}
+          </div>
         </div>
       </div>
     </div>

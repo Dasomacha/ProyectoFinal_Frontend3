@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router"; // Usar react-router-dom en vez de "react-router"
-import styles from "./Navbar.module.css"; // Asegúrate de que los estilos sean importados correctamente
-import logo from "../../assets/logo.png"; // Importa la imagen desde assets
+import { Link, useLocation } from "react-router";
+import styles from "./Navbar.module.css"; 
+import logo from "../../assets/logo.png"; 
 
 const Navbar = () => {
+  const location = useLocation();
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
@@ -11,13 +12,28 @@ const Navbar = () => {
       </div>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <Link to="/" className={styles.navLink}>Home</Link>
+          <Link
+            to="/"
+            className={`${styles.navLink} ${location.pathname === "/" ? styles.active : ""}`}
+          >
+            Home
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/favorites" className={styles.navLink}>Favoritos</Link>
+          <Link
+            to="/favorites"
+            className={`${styles.navLink} ${location.pathname === "/favorites" ? styles.active : ""}`}
+          >
+            Favoritos
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/comments" className={styles.navLink}>Comentarios</Link> {/* Nueva ruta para comentarios */}
+          <Link
+            to="/comments"
+            className={`${styles.navLink} ${location.pathname === "/comments" ? styles.active : ""}`}
+          >
+            Comentarios
+          </Link>
         </li>
       </ul>
     </nav>
