@@ -4,7 +4,7 @@ Este proyecto es una aplicación web desarrollada con **React** y **Vite** que p
 
 ## Características
 
-- **Lista de Pokémon:** Obtiene y muestra información de 60 Pokémon.
+- **Lista de Pokémon:** Obtiene y muestra información de 180 Pokémon.
 - **Información detallada:** Cada tarjeta permite acceder a más información del Pokémon seleccionado.
 - **Gestión de favoritos:** Los usuarios pueden marcar Pokémon como favoritos y verlos en una lista separada.
 - **Interfaz interactiva:** Diseño limpio y adaptativo, utilizando componentes reutilizables.
